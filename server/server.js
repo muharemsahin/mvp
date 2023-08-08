@@ -29,6 +29,8 @@ app.get("/", async (req, res) => {
   }
 });
 
+
+
 app.get("/snr/:selectedCOP", async (req, res) => {
     const selectedCOP = req.params.selectedCOP;
   
