@@ -10,7 +10,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get("/", async (req, res) => {
+app.get("/api", async (req, res) => {
   try {
     const results = await db.query("SELECT * FROM typen");
     res.status(200).json({
@@ -31,7 +31,7 @@ app.get("/", async (req, res) => {
 
 
 
-app.get("/snr/:selectedCOP", async (req, res) => {
+app.get("/api/snr/:selectedCOP", async (req, res) => {
     const selectedCOP = req.params.selectedCOP;
   
     try {
